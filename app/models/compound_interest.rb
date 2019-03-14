@@ -2,7 +2,7 @@ class CompoundInterest
 
   include ActiveModel::Model
 
-  attr_accessor :current_principal, :years_to_grow, :interest_rate#, :annual_addition
+  attr_accessor :current_principal, :years_to_grow, :interest_rate
 
   attr_reader :result
 
