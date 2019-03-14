@@ -18,7 +18,7 @@ class CompoundInterest
   private
 
   def calculate_result
-    future_value_of_principal + future_value_of_additions
+    future_value_of_principal
   end
 
   def future_value_of_principal
@@ -26,7 +26,7 @@ class CompoundInterest
   end
 
   def future_value_of_additions
-    0
+    annual_addition.to_d * ((1 + interest_rate.to_d / 100 / 12) ** (years_to_grow.to_d * 12) - 1) / (interest_rate.to_d / 100)
   end
 
 end
